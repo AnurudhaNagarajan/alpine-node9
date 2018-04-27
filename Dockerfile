@@ -45,7 +45,3 @@ run apk --no-cache add --virtual native-deps \
   #apk del native-deps
   # Bundle app source
 # Install app dependencies
-COPY package.json /src/package.json
-RUN cd /src; 
- 
-COPY . /src
