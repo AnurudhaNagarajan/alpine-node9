@@ -30,7 +30,7 @@ RUN set -x \
 		openjdk8-jre="$JAVA_ALPINE_VERSION" \
 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]		
 
-run apk --no-cache add --virtual native-deps \
+RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
   rm -rf node_modules &&\
   npm install --quiet node-gyp -g &&\
@@ -43,5 +43,3 @@ run apk --no-cache add --virtual native-deps \
   #npm --add-python-to-path='true' --debug install --global windows-build-tools
   #npm install --bower
   #apk del native-deps
-  # Bundle app source
-# Install app dependencies
