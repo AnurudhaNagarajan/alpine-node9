@@ -35,10 +35,10 @@ RUN apk --no-cache add --virtual native-deps \
   rm -rf node_modules &&\
   npm install --quiet node-gyp -g &&\
   npm install bower -g &&\
-  npm install node-gyp -g
-  #npm install phantomjs -g &&\
-  #npm install phantomjs-prebuilt@2.1.14 --ignore-scripts &&\
-  #npm install -g karma-cli &&\
+  npm install node-gyp -g &&\
+  npm install phantomjs -g &&\
+  npm install phantomjs-prebuilt@2.1.14 --ignore-scripts &&\
+  npm install -g karma-cli 
   #npm rebuild
   #npm --add-python-to-path='true' --debug install --global windows-build-tools
   #npm install --bower
